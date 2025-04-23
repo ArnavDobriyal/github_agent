@@ -167,7 +167,8 @@ root_agent = Agent(
         "- Logs & tips: view_log, recommend_action\n"
         "- File/Folder: list_repo_files, list_folder_contents, describe_structure, update_readme\n"
         "- Shell execution: run_shell_command(cmd)\n"
-        "update_readme should be run when you think it is appropriate or some major change occur dont ask user to do it\n"
+        "update_readme should be run when new data is added\n"
+        "If there is a requirement that are not in tools then tell the user the commands to do it from cmd and if user accepts then run the command\n"
         "Use only what the user asks, in the right order (e.g., add_data() before commit_data())."
     ),
     tools=[
