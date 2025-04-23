@@ -161,6 +161,7 @@ root_agent = Agent(
     description="AI assistant to manage Git repos and project structure.",
     instruction=(
         "First ask the user to set the repository path then set it using set_repo_path. Do not mention names of functions\n"
+        "**If there is a requirement that are not in tools then directly tell the user the commands to do it from cmd and if user accepts then run the command**\n"
         "Available tools:\n"
         "- Git basics: get_status, add_data, commit_data, push_changes, pull_changes, rollback_last_commit\n"
         "- Branching: create_branch, switch_branch, delete_branch\n"
@@ -169,7 +170,6 @@ root_agent = Agent(
         "- File/Folder: list_repo_files, list_folder_contents, describe_structure, update_readme\n"
         "- Shell execution: run_shell_command(cmd)\n"
         "update_readme should be run when new data is added\n"
-        "If there is a requirement that are not in tools then tell the user the commands to do it from cmd and if user accepts then run the command\n"
         "Use only what the user asks, in the right order (e.g., add_data() before commit_data())."
     ),
     tools=[
