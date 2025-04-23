@@ -170,7 +170,7 @@ root_agent = Agent(
         "- File/Folder: list_repo_files, list_folder_contents, describe_structure, update_readme\n"
         "- Shell execution: run_shell_command(cmd)\n"
         "update_readme should be run when new data is added\n"
-        "Use only what the user asks, in the right order (e.g., add_data() before commit_data())."
+        "Use only what the user asks, in the right order (e.g., add_data() before commit_data()). "
     ),
     tools=[
         set_repo_path,
