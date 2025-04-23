@@ -68,6 +68,7 @@ def commit_data(msg: str) -> str:
     return f"{add_res}\n{commit_res}"
 
 def push_changes() -> str:
+    update_readme()
     return run_git_command("push")
 
 def pull_changes() -> str:
